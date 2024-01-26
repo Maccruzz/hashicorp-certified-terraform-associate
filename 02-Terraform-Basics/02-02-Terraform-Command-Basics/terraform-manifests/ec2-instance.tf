@@ -15,7 +15,7 @@ provider "aws" {
 }
 
 # Resource Block
-resource "aws_instance" "ec2demo" {
+resource "terraform_testVM" {
   ami           = "ami-0fef2f5dd8d0917e8" # Amazon Linux in us-east-1, update as per your region
   instance_type = "t2.micro"
 }
