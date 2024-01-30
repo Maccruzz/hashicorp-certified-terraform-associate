@@ -18,17 +18,14 @@ provider "aws" {
 resource "aws_instance" "terraform_test_vm1" {
   ami           = "ami-0fef2f5dd8d0917e8" # Amazon Linux in us-east-1, update as per your region
   instance_type = "t2.micro"
- 
-}
-
-{
-  tags = {
+ tags = {
     Name = terraform_test_vm1
     Env = POC
     Application = ITOP
-    Owner = fulbert.soopaul@teamwork.net
+    Owner = "fulbert.soopaul@teamwork.net"
     BusinessUnit = TWMU
     Schedule = OnDemand
   }
 }
+
 
